@@ -1,10 +1,10 @@
 <div class="input-field">
-	<input type="text" name="nome" id="nome" value="{{ isset($registro->nome) ? $registro->nome : null }}">
 	<label for="nome">Nome</label>
+	<input type="text" name="nome" id="nome" value="{{ isset($registro->nome) ? $registro->nome : null }}">
 </div>
 <div class="input-field">
-	<textarea type="text" name="descricao" id="descricao" class="materialize-textarea">{{ isset($registro->descricao) ? $registro->descricao : null }}</textarea>
 	<label for="descricao">Descrição</label>
+    <input type="text" name="descricao" id="descricao" value="{{ isset($registro->descricao) ? $registro->descricao : null }}">
 </div>
 <div class="input-field">
 	<input type="text" name="imagem" id="imagem" value="{{ isset($registro->imagem) ? $registro->imagem : null }}">
