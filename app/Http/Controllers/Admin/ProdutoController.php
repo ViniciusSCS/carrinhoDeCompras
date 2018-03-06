@@ -51,7 +51,7 @@ class ProdutoController extends Controller
         return redirect()->route('admin.produtos');
     }
 
-    public function deletar($id)
+    public function deletar(Request $req, $id)
     {
 
         Produto::find($id)->delete();
