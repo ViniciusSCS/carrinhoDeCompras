@@ -11,15 +11,18 @@
 			<table>
 				<thead>
 					<tr>
-						<th></th>
 						<th>ID</th>
 						<th>Nome</th>
 						<th>Localizador</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
 					@foreach ($cupons as $cupom)
 					<tr>
+						<td>{{ $cupom->id }}</td>
+						<td>{{ $cupom->nome }}</td>
+						<td>{{ $cupom->localizador }}</td>
 						<td>
 							<a class="btn-flat tooltipped" href="{{ route('admin.cupons.editar', $cupom->id) }}" class="btn-flat tooltipped" data-position="right" data-delay="50" data-tooltip="Editar cupom?">
 								<i class="material-icons black-text">mode_edit</i>
@@ -28,9 +31,6 @@
 								<i class="material-icons black-text">delete</i>
 								</a>
 						</td>
-						<td>{{ $cupom->id }}</td>
-						<td>{{ $cupom->nome }}</td>
-						<td>{{ $cupom->localizador }}</td>
 					</tr>
 					@endforeach
 				</tbody>

@@ -51,7 +51,7 @@ class CupomDescontoController extends Controller
         return redirect()->route('admin.cupons');
     }
 
-    public function deletar($id)
+    public function deletar(Request $req, $id)
     {
 
         CupomDesconto::find($id)->delete();
