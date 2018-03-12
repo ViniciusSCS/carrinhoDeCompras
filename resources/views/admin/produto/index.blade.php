@@ -8,13 +8,11 @@
 			@if (Session::has('admin-mensagem-sucesso'))
 	            <div class="card-panel green"><strong>{{ Session::get('admin-mensagem-sucesso') }}<strong></div>
 	        @endif
-			@if (empty($produtos))
-				<div class="row">
-					<a class="btn-floating btn-large blue tooltipped" href="{{ route('admin.produtos.adicionar') }}" title="Adicionar" data-position="top" data-delay="50" data-tooltip="Adicionar produto?">
-						<i class="material-icons">add</i>
-					</a>
-				</div>
-			@endif
+			<div class="row">
+				<a class="btn-floating btn-large blue tooltipped" href="{{ route('admin.produtos.adicionar') }}" title="Adicionar" data-position="top" data-delay="50" data-tooltip="Adicionar produto?">
+					<i class="material-icons">add</i>
+				</a>
+			</div>
 			<table>
 				<thead>
 					<tr>
@@ -43,11 +41,13 @@
 				</tbody>
 			</table>
 		</div>
-		<div class="row">
-			<a class="btn-floating btn-large blue tooltipped" href="{{ route('admin.produtos.adicionar') }}" title="Adicionar" data-position="top" data-delay="50" data-tooltip="Adicionar produto?">
-				<i class="material-icons">add</i>
-			</a>
-		</div>
+		@if (empty($produtos))
+			<div class="row">
+				<a class="btn-floating btn-large blue tooltipped" href="{{ route('admin.produtos.adicionar') }}" title="Adicionar" data-position="top" data-delay="50" data-tooltip="Adicionar produto?">
+					<i class="material-icons">add</i>
+				</a>
+			</div>
+		@endif
 	</div>
 
 @endsection
